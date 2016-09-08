@@ -1,0 +1,100 @@
+/*-----------------------------------------------------------------------------
+    admin-input-text
+-----------------------------------------------------------------------------*/
+.admin-input-text {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: 32px;
+  margin-bottom: 20px;
+  padding: 0 17px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+
+  @include breakpoint($s2) {
+    height: 45px;
+  }
+  &_small {
+    display: inline-block;
+    width: 45px;
+    height: 32px;
+    margin: 0 .5em 0 0;
+    padding: 0 5px;
+    text-align: center;
+  }
+  &_textarea {
+    max-width: 500px;
+    height: 249px;
+    padding: 10px 17px;
+    resize: none;
+  }
+}
+
+/*-----------------------------------------------------------------------------
+    /admin-input-text
+-----------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------
+    admin-button
+-----------------------------------------------------------------------------*/
+.admin-button {
+  display: inline-block;
+  height: 40px;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: all .25s;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  background-color: $c7;
+  font-family: $f1;
+  &:hover {
+    background-color: darken($c7, 5);
+  }
+}
+
+/*-----------------------------------------------------------------------------
+    /admin-button
+-----------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------
+    admin-file
+-----------------------------------------------------------------------------*/
+.admin-file {
+  position: relative;
+  display: block;
+  min-height: 34px;
+  margin-bottom: 20px;
+  padding-left: 40px;
+  transition: all .25s;
+  color: $c7;
+  &:hover {
+    cursor: pointer;
+    color: darken($c7, 5);
+    .admin-file__icon {
+      opacity: 1;
+      fill: darken($c7, 5);
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 34px;
+    transition: all .25s;
+    opacity: .7;
+    fill: $c7;
+    stroke: $c3;
+    stroke-width: 1px;
+  }
+  &__input {
+    opacity: 0;
+    position: absolute;
+  }
+}
+
+/*-----------------------------------------------------------------------------
+    /admin-file
+-----------------------------------------------------------------------------*/

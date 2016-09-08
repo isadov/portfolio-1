@@ -1,0 +1,8 @@
+// Подключение шрифтов
+@include font-face(SansusWebissimo, '../fonts/sansus-webissimo-regular', 400, normal, eot otf svg ttf woff);
+@include font-face(Roboto, '../fonts/roboto-light', 300, normal, eot svg ttf woff woff2);
+@include font-face(Roboto, '../fonts/roboto-lightitalic', 300, italic, eot svg ttf woff woff2);
+@include font-face(Roboto, '../fonts/roboto-regular', 400, normal, eot svg ttf woff woff2);
+@include font-face(Roboto, '../fonts/roboto-medium', 500, normal, eot svg ttf woff woff2);
+@include font-face(Roboto, '../fonts/roboto-bold', 700, normal, eot svg ttf woff woff2);
+@include font-face(Roboto, '../fonts/roboto-bolditalic', 700, italic, eot svg ttf woff woff2);

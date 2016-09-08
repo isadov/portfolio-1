@@ -1,0 +1,41 @@
+/*-----------------------------------------------------------------------------
+    admin-tabs
+-----------------------------------------------------------------------------*/
+.admin-tabs {
+  padding: 25px 10px;
+
+  color: $c4;
+  &__item {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  &__section {
+    margin-bottom: 25px;
+    @include breakpoint($s2) {
+      display: inline-block;
+      margin-right: 60px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &__title {
+    display: block;
+    color: $c4;
+    font-weight: 500;
+    line-height: 1.62;
+    &_1 {
+      margin-bottom: 20px;
+      font-size: 21px;
+    }
+    &_2 {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+    /admin-tabs
+-----------------------------------------------------------------------------*/

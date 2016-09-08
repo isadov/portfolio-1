@@ -1,0 +1,24 @@
+extends ../../layouts/page
+
+block title
+    title Обо мне
+
+block header
+  +header('Савельев Андрей', 'Личный сайт веб разработчика', 'portfolio-header', 'about')
+
+block main
+  #page-about
+  .about
+    .about__section.about__section_intro
+        .about__wrapper.about__wrapper_intro
+          include about-intro
+    .about__section.about__section_skills
+      .about__wrapper.about__wrapper_skills
+        include about-skills
+
+block beforeFooter
+  include ../../partials/contacts
+
+block scripts
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCbpjzhR9imV-BctvkDJ1taGQp6D49smqk' defer)
+  include ../../partials/_scripts

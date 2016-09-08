@@ -1,0 +1,60 @@
+/*-----------------------------------------------------------------------------
+    navigation
+-----------------------------------------------------------------------------*/
+.navigation {
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    @include breakpoint($s2) {
+      text-align: left;
+    }
+  }
+  &__item {
+    position: relative;
+
+    display: inline-block;
+
+    margin-right: 7px;
+
+    @include breakpoint($s2) {
+      margin-right: 16px;
+    }
+    @include breakpoint($s3) {
+      margin-right: 15px;
+    }
+    @include breakpoint($s4) {
+      margin-right: 36px;
+    }
+    &:after {
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      display: block;
+      width: 30px;
+      height: 2px;
+      margin-left: -(30px / 2);
+      content: '';
+      transition: all .25s;
+      transform: scale(0, 1);
+      background-color: #fff;
+    }
+    &:hover {
+      &:after {
+        transform: scale(1);
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+/*-----------------------------------------------------------------------------
+    /navigation
+-----------------------------------------------------------------------------*/

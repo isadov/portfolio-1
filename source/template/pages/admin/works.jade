@@ -1,0 +1,11 @@
+span.admin-tabs__title.admin-tabs__title_1 Страница «Мои работы»
+span.admin-tabs__title.admin-tabs__title_2 Добавить работу
+form(action='/admin/work').js-work-add-form
+  input.admin-input-text(type='text' name='name' placeholder='Название проекта')
+  input.admin-input-text(type='text' name='description' placeholder='Описание')
+  input.admin-input-text(type='text' name='link' placeholder='Ссылка')
+  label.admin-file Загрузить картинку
+    +iconsvg('file').admin-file__icon
+    input.admin-file__input(type='file' name='image' value='')
+  .admin-tabs__section
+    input.admin-button(type='submit' value='Добавить')

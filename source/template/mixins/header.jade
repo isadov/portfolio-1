@@ -1,0 +1,21 @@
+mixin header(title, text, bgText, mod)
+  header.header.js-header(class='header_#{mod}' id='top')
+    .header__bg-wrapper
+      .header__bg.js-header__bg
+    .header__top
+      include ../components/topline
+      // /.topline
+    .header__middle
+      .author-card.js-header__author(class='author-card_#{mod}')
+        .author-card__img-wrap(class='author-card__img-wrap_#{mod}')
+          img.author-card__img(src='assets/img/photo.jpg' alt='Орлов Артур')
+        span.author-card__title(class='author-card__title_#{mod}')= title
+        p.author-card__text(class='author-card__text_#{mod}')= text
+        +iconsvg(bgText)(class='author-card__bg-text author-card__bg-text_#{bgText} js-header__text')
+    a.header__arrow-link.js-scrollto(href='#next')
+      +iconsvg('arrow-down').header__arrow
+    .header__shadow
+    svg(class='header__triangle header__triangle_#{mod}' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 320 28' preserveAspectRatio='xMidYMin slice')
+        polygon.header__triangle-part.header__triangle-part_left(class='header__triangle-part_#{mod} header__triangle-part_left_#{mod}' points='0,0 0,28 160,28')
+        polygon.header__triangle-part.header__triangle-part_right(class='header__triangle-part_#{mod} header__triangle-part_right_#{mod}' points='320,0 320,28 160,28')
+  #next

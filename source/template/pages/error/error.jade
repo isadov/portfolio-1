@@ -1,0 +1,16 @@
+doctype html
+html
+  include ../../partials/_head
+  body.body
+    include ../../components/browsehappy
+    main.main
+      .error
+        .error__wrapper
+          if error
+            .error__bg-code= error.code
+            .error__code= error.code
+            .error__message= error.message
+          else
+            .error__code 500
+            .error__message Ошибка сервера
+          a.error__link(href='/') Вернутся на сайт

@@ -1,0 +1,107 @@
+/*-----------------------------------------------------------------------------
+    social
+-----------------------------------------------------------------------------*/
+.social {
+  padding: 0;
+  list-style-type: none;
+  font-size: 0;
+  &_footer {
+    text-align: center;
+    @include breakpoint($s2) {
+      text-align: left;
+    }
+  }
+  &__item {
+    display: inline-block;
+    margin-right: 30px;
+    vertical-align: bottom;
+
+    @include breakpoint($s3) {
+      margin-right: 29px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    display: inline-block;
+    text-indent: -9999px;
+  }
+  &__icon {
+    display: block;
+    text-indent: 0;
+    fill: #fff;
+    transition: all .25s;
+    &:hover,
+    &:active {
+      fill: $c2;
+    }
+    &_footer {
+      opacity: .5;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &_welcome {
+      opacity: .5;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &_vk {
+      width: 24px;
+      height: 13px;
+
+      @include breakpoint($s2) {
+        width: 31px;
+        height: 17px;
+      }
+      &_footer {
+        width: 31px;
+        height: 17px;
+      }
+      &_welcome {
+        width: 31px;
+        height: 17px;
+      }
+    }
+    &_github {
+      width: 21px;
+      height: 17px;
+
+      @include breakpoint($s2) {
+        width: 26px;
+        height: 22px;
+      }
+      &_footer {
+        width: 26px;
+        height: 22px;
+      }
+      &_welcome {
+        width: 26px;
+        height: 22px;
+      }
+    }
+    &_in {
+      width: 19px;
+      height: 17px;
+
+      @include breakpoint($s2) {
+        width: 24px;
+        height: 22px;
+      }
+      &_footer {
+        width: 24px;
+        height: 22px;
+      }
+      &_welcome {
+        width: 24px;
+        height: 22px;
+      }
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+    /social
+-----------------------------------------------------------------------------*/

@@ -1,0 +1,9 @@
+mixin social(items, modificator)
+  ul(class='#{attributes.class}' + (modificator ? ' #{attributes.class}_#{modificator}' : ''))
+    each info, name in items
+      li(class='#{attributes.class}__item' + (modificator ? ' #{attributes.class}__item_#{modificator}' : ''))
+        a(class='#{attributes.class}__link' + (modificator ? ' #{attributes.class}__link_#{modificator}' : '') href=info.href target='_blank')= name
+          +iconsvg(info.icon)(class='#{attributes.class}__icon #{attributes.class}__icon_#{info.icon}' + (modificator ? ' \
+          #{attributes.class}__icon_#{modificator}\
+          #{attributes.class}__icon_#{info.icon}_#{modificator}\
+          ' : ''))

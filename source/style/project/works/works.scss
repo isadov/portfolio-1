@@ -1,0 +1,172 @@
+/*-----------------------------------------------------------------------------
+    works
+-----------------------------------------------------------------------------*/
+.works {
+  &__section {
+    &_1 {
+      padding-top: 20px;
+
+      @include breakpoint($s2) {
+        padding-top: 42px;
+      }
+      @include breakpoint($s3) {
+        padding-top: 59px;
+      }
+    }
+    &_2 {
+      background: url('../img/works-bg-1.jpg') 50% 100% no-repeat;
+
+      @include breakpoint($s1 + 1px) {
+        background-image: url('../img/works-bg-2.jpg');
+      }
+      @include breakpoint($s2 + 1px) {
+        background-image: url('../img/works-bg-3.jpg');
+      }
+      @include breakpoint($s3 + 1px) {
+        background-image: url('../img/works-bg-4.jpg');
+      }
+      @include breakpoint($s4 + 1px) {
+        background-image: url('../img/works-bg.jpg');
+      }
+    }
+  }
+  &__container {
+    padding-top: 29px;
+
+    @include breakpoint($s2) {
+      padding-top: 39px;
+    }
+    @include breakpoint($s3) {
+      position: relative;
+      overflow: hidden;
+      width: 1200px;
+      margin: auto;
+      padding-top: 58px;
+    }
+  }
+  &__header {
+    &_1 {
+      margin-bottom: 17px;
+
+      @include breakpoint($s2) {
+        margin-bottom: 27px;
+      }
+      @include breakpoint($s3) {
+        margin-bottom: 35px;
+        &:after {
+          margin-top: 22px;
+        }
+      }
+    }
+    &_2 {
+      margin-bottom: 23px;
+
+      @include breakpoint($s2) {
+        margin-bottom: 36px;
+      }
+      @include breakpoint($s3) {
+        margin-bottom: 30px;
+      }
+      &:after {
+        margin-top: 20px;
+
+        @include breakpoint($s2) {
+          margin-top: 9px;
+        }
+        @include breakpoint($s3) {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+  &__reviews {
+    margin-bottom: 20px;
+  }
+  &__feedback {
+    position: relative;
+    overflow: hidden;
+    max-width: 299px;
+    margin: 0 auto 40px;
+    border-radius: 5px;
+
+    @include breakpoint($s2) {
+      max-width: 349px;
+    }
+    @include breakpoint($s3) {
+      max-width: 380px;
+    }
+  }
+  &__feedback-blur {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    background: url('../img/works-bg-1.jpg') 50% 100% no-repeat;
+    filter: blur(5px);
+    @include breakpoint($s1 + 1px) {
+      background-image: url('../img/works-bg-2.jpg');
+    }
+    @include breakpoint($s2 + 1px) {
+      background-image: url('../img/works-bg-3.jpg');
+    }
+    @include breakpoint($s3 + 1px) {
+      background-image: url('../img/works-bg-4.jpg');
+    }
+    @include breakpoint($s4 + 1px) {
+      background-image: url('../img/works-bg.jpg');
+    }
+  }
+  &__arrow-link {
+    display: block;
+    width: 26px;
+    height: 16px;
+    margin: 0 auto 40px;
+    transition: all .25s;
+    opacity: .7;
+    &:hover {
+      transform: translateY(-5px);
+      opacity: 1;
+    }
+  }
+  &__arrow {
+    display: block;
+    width: 26px;
+    height: 16px;
+    transform: rotate(180deg);
+    fill: #fff;
+  }
+  &__leaf {
+    position: absolute;
+    z-index: 10;
+    display: none;
+
+    @include breakpoint($s3) {
+      display: block;
+    }
+    &_1 {
+      top: 20px;
+      left: 37px;
+      width: 99px;
+      height: 91px;
+      background-image: url('../img/leaf1.png');
+    }
+    &_2 {
+      top: 300px;
+      right: 15px;
+      width: 141px;
+      height: 120px;
+      background-image: url('../img/leaf2.png');
+    }
+    &_3 {
+      top: 500px;
+      left: 160px;
+      width: 58px;
+      height: 108px;
+      background-image: url('../img/leaf3.png');
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+    /works
+-----------------------------------------------------------------------------*/

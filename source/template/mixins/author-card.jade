@@ -1,0 +1,6 @@
+mixin author-card(title, text, mod)
+  .author-card(class='author-card_#{mod}')
+    .author-card__img-wrap(class='author-card__img-wrap_#{mod}')
+      img.author-card__img(src='assets/img/photo.jpg' alt='Савельев Андрей')
+    span.author-card__title(class='author-card__title_#{mod}')= title
+    p.author-card__text(class='author-card__text_#{mod}')= text

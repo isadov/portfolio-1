@@ -1,0 +1,71 @@
+/*-----------------------------------------------------------------------------
+    blog-article
+-----------------------------------------------------------------------------*/
+.blog-article {
+  margin-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 4px solid rgba($c4, .07);
+
+  @include breakpoint($s2) {
+    margin-top: 49px;
+    padding-bottom: 49px;
+  }
+  @include breakpoint($s3) {
+    margin-top: 62px;
+    padding-bottom: 68px;
+    border-width: 5px;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  &__header {
+    margin-bottom: 8px;
+
+    @include breakpoint($s3) {
+      margin-bottom: 18px;
+    }
+  }
+  &__title {
+    margin: 0 0 8px;
+    color: $c6;
+    font: 21px/28px $f2;
+
+    @include breakpoint($s2) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+    @include breakpoint($s3) {
+      margin-bottom: 17px;
+      font-size: 35px;
+      line-height: 41px;
+    }
+  }
+  &__datetime {
+    color: $c12;
+  }
+  &__text {
+    line-height: 1.5;
+
+    @include breakpoint($s3) {
+      line-height: 1.625;
+    }
+    p {
+      margin: 0 0 0.7142857143em;
+
+      @include breakpoint($s3) {
+        margin-bottom: 0.5625em;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+    /blog-article
+-----------------------------------------------------------------------------*/

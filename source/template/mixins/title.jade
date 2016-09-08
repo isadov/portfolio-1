@@ -1,0 +1,6 @@
+mixin title(element, bg)
+  if block
+    #{element}.title(class=attributes.class)
+      block
+      if bg
+        +iconsvg(bg)(class='title__bg title__bg_#{bg}')

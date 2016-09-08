@@ -1,0 +1,31 @@
+extends ../../layouts/page
+
+block title
+  title Мои работы
+
+block header
+  +header('Савельев Андрей', 'Личный сайт веб разработчика', 'portfolio-header', 'works')
+
+block main
+  #page-works
+  section.works
+    section.works__section.works__section_1
+      +title('h1', 'works-header').title_1.works__header.works__header_1 Мои работы
+      include slider
+    section.works__section.works__section_2.js-parallax.js-blur-bg#js-cover-target
+      .works__container
+        .works__leaf.works__leaf_1.js-leaf_1
+        .works__leaf.works__leaf_2.js-leaf_2
+        .works__leaf.works__leaf_3.js-leaf_3
+        +title('span', 'about-header').works__header.works__header_2 Что обо мне#[br]говорят
+        .works__reviews
+          include reviews
+        .works__feedback
+          svg(version='1.1', xmlns='http://www.w3.org/2000/svg', style='display:none')
+            filter#blur
+              fegaussianblur(stddeviation='6')
+          .works__feedback-blur.js-blur
+          include feedback
+        a.works__arrow-link.js-scrollto(href='#top')
+          +iconsvg('arrow-down').works__arrow
+

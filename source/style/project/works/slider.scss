@@ -1,0 +1,206 @@
+/*-----------------------------------------------------------------------------
+    slider
+-----------------------------------------------------------------------------*/
+.slider {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  min-height: 650px;
+  background-color: rgba(#ccc, .5);
+  flex-flow: column wrap;
+  &__about {
+    display: flex;
+    text-align: center;
+    background-color: $c1;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+    flex: 1 0 auto;
+    @include breakpoint($s2) {
+      width: 50%;
+      flex: 0 0 100%;
+      order: 0;
+    }
+  }
+  &__about-wrapper {
+    padding: 31px 0;
+  }
+  &__about-name {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &__about-description {
+    display: block;
+    margin-bottom: 17px;
+    text-align: center;
+    color: $c12;
+    font-weight: 500;
+  }
+  &__about-button {
+    position: relative;
+    display: inline-block;
+    padding: 21px;
+    padding: 14px 19px 14px 53px;
+    transition: all .25s;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 20px;
+    background-color: $c15;
+    line-height: 1;
+    &:hover {
+      background-color: darken($c15, 7);
+    }
+    &:active {
+      background-color: lighten($c15, 7);
+    }
+  }
+  &__about-button-icon {
+    position: absolute;
+    top: 50%;
+    left: 21px;
+    width: 20px;
+    height: 19px;
+    transform: translateY(-50%);
+    fill: #fff;
+  }
+  &__main {
+    position: relative;
+    display: flex;
+    min-height: 200px;
+    background-color: $c17;
+    flex: 1 0 auto;
+    order: 0;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint($s2) {
+      width: 50%;
+      padding: 0;
+      flex: 0 0 70%;
+      order: 1;
+    }
+  }
+  &__main-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 50% 50% no-repeat;
+    background-size: 60% auto;
+
+    @include breakpoint((min-width: 540px)) {
+      background-size: 50% auto;
+    }
+    @include breakpoint((min-height 850px)) {
+      background-size: 78% auto;
+    }
+  }
+  &__work-list {
+    position: absolute;
+    visibility: hidden;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    list-style-type: none;
+  }
+  &__work-img {
+    width: 77.5%;
+    height: auto;
+
+    @include breakpoint($s2) {
+      max-height: 79.23809524%;
+    }
+  }
+  &__controls {
+    display: flex;
+    min-height: 100px;
+    background-color: #e3ded0;
+    flex: 1 0 auto;
+    order: 2;
+    @include breakpoint($s2) {
+      width: 50%;
+      flex: 0 0 30%;
+      order: 1;
+    }
+  }
+  &__control {
+    position: relative;
+    z-index: 1;
+    flex: 1 0 50%;
+    &:after {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background-color: rgba(147, 153, 141, 0.7);;
+    }
+    &:hover {
+      cursor: pointer;
+      .slider__control-ic_down {
+        transform: translateY(15px);
+      }
+      .slider__control-ic_up {
+        transform: translateY(-15px);
+      }
+    }
+    &:active {
+      .slider__control-ic_down {
+        transition-duration: .15s;
+        transform: translateY(20px);
+      }
+      .slider__control-ic_up {
+        transition-duration: .15s;
+        transform: translateY(-20px);
+      }
+    }
+  }
+  &__control-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  &__control-preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    &_current,
+    &_next {
+      background: 50% 50% no-repeat;
+      background-size: 60% auto;
+
+      @include breakpoint((min-height 850px)) {
+        background-size: 75% auto;
+      }
+    }
+    &_current {
+    }
+    &_next {
+      top: -100%;
+    }
+  }
+  &__control-ic {
+    position: absolute;
+    z-index: 11;
+    top: 50%;
+    left: 50%;
+    width: 43px;
+    height: 27px;
+    margin-top: -(27px / 2);
+    margin-left: (-43px / 2);
+    transition: all .35s;
+    filter: drop-shadow(1px 1.7px 2px rgba(0, 0, 0, 0.16));
+    fill: #fff;
+  }
+}
+
+/*-----------------------------------------------------------------------------
+    /slider
+-----------------------------------------------------------------------------*/

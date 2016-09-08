@@ -1,0 +1,173 @@
+/*-----------------------------------------------------------------------------
+    author
+-----------------------------------------------------------------------------*/
+.author-card {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 5%;
+  text-align: center;
+  color: #ffffff;
+  &__img-wrap {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    width: 141px;
+    height: 141px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+
+    @include breakpoint($s2) {
+      margin-bottom: 26px;
+    }
+    @include breakpoint($s3) {
+      margin-bottom: 23px;
+    }
+    &_blog {
+      margin-bottom: 21px;
+
+      @include breakpoint($s3) {
+        margin-bottom: 21px;
+      }
+    }
+    &_welcome {
+      margin-bottom: 22px;
+
+      @include breakpoint($s2) {
+        margin-bottom: 16px;
+      }
+      @include breakpoint($s3) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+  &__title {
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin-bottom: 8px;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1;
+
+    @include breakpoint($s2) {
+      margin-bottom: 2px;
+      font-size: 35px;
+    }
+    @include breakpoint($s3) {
+      margin-bottom: 0;
+      font-size: 35px;
+      line-height: 40px;
+    }
+    &_blog {
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      font: 35px/42px $f2;
+      font-weight: 400;
+
+      @include breakpoint($s2) {
+        font-size: 49px;
+        line-height: 52px;
+      }
+      @include breakpoint($s3) {
+        margin-bottom: 25px;
+        font-size: 63px;
+        line-height: 1;
+      }
+      &:after {
+        display: block;
+        width: 56px;
+        height: 3px;
+        margin: 13px auto 0;
+        content: '';
+        background-color: white;
+
+        @include breakpoint($s2) {
+          width: 89px;
+          margin-top: 11px;
+        }
+        @include breakpoint($s3) {
+          margin-top: 22px;
+        }
+      }
+    }
+    &_welcome {
+      margin-bottom: 12px;
+
+      @include breakpoint($s2) {
+        margin-bottom: 9px;
+        font-size: 28px;
+      }
+      @include breakpoint($s3) {
+        margin-bottom: 3px;
+      }
+    }
+  }
+  &__text {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    color: #fff;
+
+    @include breakpoint($s2) {
+      font-size: 16px;
+    }
+    &_blog {
+      @include breakpoint($s2) {
+        font-size: 14px;
+      }
+      @include breakpoint($s3) {
+        font-size: 16px;
+      }
+    }
+    &_welcome {
+      opacity: .8;
+    }
+  }
+  &__bg-text {
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    display: none;
+    opacity: .12;
+    fill: #fff;
+    &_portfolio-header {
+      @include breakpoint($s2) {
+        top: 10%;
+        display: block;
+        width: 740px;
+        margin-left: -(740px / 2);
+        height: 197px;
+      }
+      @include breakpoint($s3) {
+        top: -15%;
+        width: 1176px;
+        height: 313px;
+        margin-left: -(1176px / 2);
+      }
+    }
+    &_blog-header {
+      @include breakpoint($s2) {
+        bottom: -23px;
+        display: block;
+        width: 243px;
+        height: 168px;
+        margin-left: -(243px / 2);
+      }
+      @include breakpoint($s3) {
+        bottom: -19px;
+        width: 303px;
+        height: 208px;
+        margin-left: -(303px / 2);
+      }
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+    /author
+-----------------------------------------------------------------------------*/

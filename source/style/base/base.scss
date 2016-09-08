@@ -1,0 +1,60 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font: 14px/1.7142857143 $f1;
+
+  @include breakpoint($s3) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  color: $c6;
+  background-color: $c3;
+}
+
+.bounceIn {
+  animation-name: bounceIn;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+}
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    transform: scale3d(.3, .3, .3);
+    opacity: 0;
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(.9, .9, .9);
+  }
+
+  60% {
+    transform: scale3d(1.03, 1.03, 1.03);
+    opacity: 1;
+  }
+
+  80% {
+    transform: scale3d(.97, .97, .97);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+}

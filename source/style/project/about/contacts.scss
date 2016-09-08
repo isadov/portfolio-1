@@ -1,0 +1,48 @@
+/*-----------------------------------------------------------------------------
+    contacts
+-----------------------------------------------------------------------------*/
+.contacts {
+  position: relative;
+  height: 1144px;
+  flex: 0 0 auto;
+  @include breakpoint($s2) {
+    height: 908px;
+  }
+  @include breakpoint($s3) {
+    height: 994px;
+  }
+  @include breakpoint($s4) {
+    height: 1108px + 21px;
+  }
+  &__map {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__box {
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    @include breakpoint($s2) {
+      top: 171px;
+      left: 50%;
+      width: 349px;
+      transform: translateX(-50%);
+    }
+    @include breakpoint($s3) {
+      top: 242px;
+      width: 380px;
+    }
+    @include breakpoint($s4) {
+      top: 345px;
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+    /contacts
+-----------------------------------------------------------------------------*/

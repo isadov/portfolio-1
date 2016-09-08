@@ -1,0 +1,23 @@
+extends ../../layouts/admin
+
+block title
+  title Админ-панель
+
+block main
+  #page-admin
+  .admin-wrapper
+    header.admin-header
+      .admin-header__topline
+        .admin-header__left
+          span.admin-header__title Панель администрирования
+        .admin-header__right
+          a.admin-header__back(href='./') Вернуться на сайт
+      .admin-header__navigation
+        +navigation(adminMenu).admin-navigation
+    main.admin-tabs
+      section.admin-tabs__item.js-tab#about
+        include about
+      section.admin-tabs__item.js-tab#blog
+        include blog
+      section.admin-tabs__item.js-tab#works
+        include works

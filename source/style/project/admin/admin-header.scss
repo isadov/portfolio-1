@@ -1,0 +1,62 @@
+/*-----------------------------------------------------------------------------
+    admin-header
+-----------------------------------------------------------------------------*/
+.admin-header {
+  &__topline {
+    display: flex;
+    min-height: 80px;
+    padding: 15px 21px;
+    text-align: center;
+    background-color: $c7;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint($s2) {
+      padding: 20px 30px;
+      text-align: left;
+      justify-content: space-between;
+    }
+  }
+  &__left {
+    order: 1;
+    flex: 1 0 100%;
+    @include breakpoint($s2) {
+      flex: 0 0 auto;
+      order: 0;
+    }
+  }
+
+  &__right {
+    order: 0;
+    flex: 1 0 100%;
+    @include breakpoint($s2) {
+      flex: 0 0 auto;
+      order: 0;
+    }
+  }
+
+  &__navigation {
+  }
+
+  &__title {
+    color: #fff;
+    font-family: $f1;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+  }
+
+  &__back {
+    text-decoration: underline;
+    opacity: .7;
+    color: #fff;
+    font-weight: 500;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+    /admin-header
+-----------------------------------------------------------------------------*/

@@ -1,0 +1,63 @@
+/*-----------------------------------------------------------------------------
+    review
+-----------------------------------------------------------------------------*/
+.review {
+  padding: 0 10px;
+  &__img-wrapper {
+    display: block;
+    overflow: hidden;
+    width: 51px;
+    height: 51px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+
+    @include breakpoint($s2) {
+      width: 77px;
+      height: 77px;
+      margin-bottom: 17px;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+  &__text {
+    position: relative;
+    margin-bottom: 7px;
+    font-style: italic;
+
+    @include breakpoint($s2) {
+      margin-bottom: 19px;
+      line-height: 1.6;
+    }
+    &:before {
+      position: absolute;
+      content: '';
+    }
+  }
+  &__text-quote {
+    position: absolute;
+    top: -23px;
+    left: 0;
+    width: 75px;
+    height: 61px;
+    opacity: 0.1;
+    fill: $c13;
+  }
+  &__author {
+    display: block;
+    text-align: center;
+    font-style: italic;
+  }
+  &__author-name {
+    display: block;
+    color: #4e8839;
+    font-weight: 700;
+  }
+  &__author-place {
+  }
+}
+
+/*-----------------------------------------------------------------------------
+    /review
+-----------------------------------------------------------------------------*/

@@ -1,0 +1,25 @@
+include ../mixins/iconsvg
+include ../mixins/social
+include ../mixins/author-card
+include ../mixins/header
+include ../mixins/title
+include ../mixins/circle-progress
+include ../mixins/navigation
+include ../mixins/quote
+
+doctype html
+html
+  include ../partials/_head
+  body.body
+    include ../components/browsehappy
+    include ../components/preloader
+    block header
+    main.main
+      block main
+
+    block beforeFooter
+    include ../partials/footer
+
+    //- Подключение js
+    block scripts
+      include ../partials/_scripts

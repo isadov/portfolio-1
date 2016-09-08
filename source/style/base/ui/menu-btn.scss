@@ -1,0 +1,111 @@
+/*-----------------------------------------------------------------------------
+    menu-btn
+-----------------------------------------------------------------------------*/
+$menu-btn-width: 26px;
+$menu-btn-thickness: 3px;
+$menu-btn-gap: 7px;
+$menu-btn-color: #fff;
+$menu-btn-anim-duration: 1s;
+.menu-btn {
+  position: relative;
+  width: $menu-btn-width;
+
+  @include breakpoint($s2) {
+    width: 40px;
+  }
+  &__l {
+    display: block;
+    height: $menu-btn-thickness*3 + $menu-btn-gap*2;
+    cursor: pointer;
+
+    @include breakpoint($s2) {
+      height: 5px * 3 + 10px * 2;
+    }
+    &:before,
+    span,
+    &:after {
+      display: block;
+      float: left;
+      width: 100%;
+      height: $menu-btn-thickness;
+      content: '';
+      transition: all .3s ease;
+      border-radius: 1px;
+      background-color: $menu-btn-color;
+
+      @include breakpoint($s2) {
+        height: 5px;
+        border-radius: 5px;
+      }
+    }
+    &:before,
+    &:after {
+      transition: all .3s ease;
+    }
+    &:before,
+    span {
+      margin-bottom: $menu-btn-gap;
+
+      @include breakpoint($s2) {
+        margin-bottom: 10px;
+      }
+    }
+    &:before {
+      transform-origin: 100% 0;
+    }
+    span {
+      transition: all .3s ease .15s;
+      transform-origin: 100% 50%;
+    }
+    &:after {
+      transform-origin: 100% 100%;
+    }
+    .menu-btn__checkbox:checked + & {
+      &:before,
+      &:after {
+        transition-delay: .15s;
+      }
+      &:before {
+        transform: rotate(-45deg) scaleX(1.14);
+      }
+      span {
+        transform: scaleX(0);
+      }
+      &:after {
+        transform: rotate(45deg) scaleX(1.14);
+      }
+    }
+  }
+  &__checkbox {
+    display: none;
+  }
+}
+
+@include breakpoint($s2) {
+  $menu-btn-width: 40px;
+  $menu-btn-thickness: 5px;
+  $menu-btn-gap: 10px;
+  $menu-btn-color: #fff;
+  $menu-btn-anim-duration: 1s;
+  .menu-btn {
+    width: $menu-btn-width;
+
+    &__l {
+      height: $menu-btn-thickness*3 + $menu-btn-gap*2;
+      &:before,
+      span,
+      &:after {
+        height: $menu-btn-thickness;
+
+        border-radius: 5px;
+      }
+      span {
+        margin-bottom: $menu-btn-gap;
+      }
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+    /menu-btn
+-----------------------------------------------------------------------------*/

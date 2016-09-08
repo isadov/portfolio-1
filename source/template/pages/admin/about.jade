@@ -1,0 +1,18 @@
+span.admin-tabs__title.admin-tabs__title_1 Страница «Обо мне»
+form.js-skills-save(action='#')
+  each skillsCat, sectionName in skills
+    .admin-tabs__section
+      span.admin-tabs__title.admin-tabs__title_2= sectionName
+      table.admin-skills
+        each value, skill in skillsCat
+          colgroup
+            col.admin-skills__name-col
+            col.admin-skills__percent-col
+          tr
+            td
+              span.admin-skills__name= skill
+            td
+              input.admin-input-text.admin-input-text_small.admin-skills__input-text.js-skill(data-category=sectionName data-skill=skill value=value)
+              | %
+  .block
+    input.admin-button(type='submit' value='Сохранить')

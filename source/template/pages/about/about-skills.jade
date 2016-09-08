@@ -1,0 +1,11 @@
+.about-skills
+  +title('h2').title_2 Чем я могу быть#[br]вам полезен
+  .about-skills__text.about__text
+    p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+  each skillsCat, sectionName in skills
+    .about-skills__category
+      +title('h2').title_3= sectionName
+      ul.about-skills__list
+        each value, skill in skillsCat
+          li.about-skills__item
+            +circle-progress(value).js-skill= skill

@@ -1,0 +1,75 @@
+/*-----------------------------------------------------------------------------
+    error
+-----------------------------------------------------------------------------*/
+.error {
+  display: flex;
+  cursor: default;
+  @extend .preloader;
+  justify-content: center;
+  align-items: center;
+
+  &__wrapper {
+    position: relative;
+    max-width: 90%;
+    text-align: center;
+
+    @include breakpoint($s4) {
+      max-width: 50%;
+    }
+  }
+
+  &__code {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    font-size: 10em;
+    font-weight: 700;
+    line-height: 1.11;
+  }
+
+  &__message {
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin-bottom: .5em;
+    color: #fff;
+    font-size: 2em;
+  }
+
+  &__link {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    text-decoration: underline;
+
+    color: #fff;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__bg-code {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    display: none;
+    transform: translate(-50%, -50%);
+    opacity: .1;
+    color: #fff;
+    font-size: 30em;
+    font-weight: 900;
+
+    @include breakpoint($s2) {
+      display: block;
+    }
+    @include breakpoint($s4) {
+      font-size: 40em;
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+    /error
+-----------------------------------------------------------------------------*/

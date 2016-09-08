@@ -1,0 +1,130 @@
+/*-----------------------------------------------------------------------------
+    welcome
+-----------------------------------------------------------------------------*/
+.welcome {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  height: 100vh;
+  min-height: 650px;
+  background: url('../img/welcome-bg-1.jpg') 50% 0 no-repeat;
+  background-size: cover;
+
+  @include breakpoint($s1 + 1px) {
+    background-image: url('../img/welcome-bg-2.jpg');
+  }
+  @include breakpoint($s2 + 1px) {
+    background-image: url('../img/welcome-bg-3.jpg');
+  }
+  @include breakpoint($s3 + 1px) {
+    background-image: url('../img/welcome-bg-4.jpg');
+  }
+  @include breakpoint($s4 + 1px) {
+    background-image: url('../img/welcome-bg.jpg');
+  }
+  justify-content: center;
+  align-items: center;
+
+  &__topbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    padding: 10px 0;
+    justify-content: center;
+    @include breakpoint($s2) {
+      padding: 19px 23px 0 0;
+      justify-content: flex-end;
+    }
+    @include breakpoint($s4) {
+      padding: 25px 102px;
+    }
+  }
+  &__auth-button {
+    padding: 12px 19px;
+    transition: background-color .25s, border-color .25s;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    background-color: transparent;
+    line-height: 1;
+
+    @include breakpoint($s2) {
+      padding: 15px 34px;
+    }
+    @include breakpoint($s3) {
+      padding: 15px 27px;
+    }
+    @include breakpoint($s4) {
+      padding: 13px 27px;
+    }
+    &:hover {
+      border-color: $c12;
+
+      background-color: $c12;
+    }
+  }
+  &__main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__flip {
+    position: relative;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    &_flipped {
+      transform: rotateY(-180deg);
+    }
+  }
+  &__hello,
+  &__auth {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+  }
+  &__hello {
+    transform: rotateY(0deg) translate(-50%, -50%);
+  }
+  &__auth {
+    transform: rotateY(180deg) translate(50%, -50%);
+  }
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+
+    @include breakpoint($s2) {
+      bottom: 35px;
+      font-size: 16px;
+    }
+  }
+  &__footer-author {
+    display: block;
+
+    @include breakpoint($s2) {
+      display: inline-block;
+    }
+    &:after {
+      display: none;
+      margin: 0 .25em;
+      content: '|';
+
+      @include breakpoint($s2) {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+    /welcome
+-----------------------------------------------------------------------------*/

@@ -1,0 +1,11 @@
+address.address
+  +title('span').title_1.title_address Контакты
+  ul.address__list
+    each info, name in address
+      li.address__item
+        .address__icon-wrap
+          +iconsvg(info.icon)(class='address__icon address__icon_#{info.icon}')
+        if info.href
+          a.address__label(href=info.href)= name
+        else
+          span.address__label.address__label_text= name

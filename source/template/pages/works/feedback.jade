@@ -1,0 +1,8 @@
+.feedback
+  +title('span').title_2.feedback__header Связаться со мной
+  form.feedback__form
+    input(type='text' name='name' placeholder='Имя' required='').feedback__input-text
+    input(type='email' name='email' placeholder='Email' required='').feedback__input-text
+    textarea(type='text' name='message' placeholder='Ваше сообщение' required='').feedback__textarea
+    input(type='submit' value='Отправить').feedback__button.feedback__button_submit
+    input(type='reset' value='Очистить').feedback__button.feedback__button_reset

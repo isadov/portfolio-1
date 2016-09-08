@@ -1,0 +1,36 @@
+/*-----------------------------------------------------------------------------
+    topbar
+-----------------------------------------------------------------------------*/
+.topbar {
+  width: 100%;
+  padding: 10px 11px;
+
+  @extend %clearfix;
+  @include breakpoint($s2) {
+    padding: 29px;
+  }
+  &__item {
+    &_1 {
+      float: left;
+      padding-top: 3px;
+
+      @include breakpoint($s2) {
+        padding-top: 1px;
+      }
+    }
+    &_2 {
+      float: right;
+
+      @include breakpoint($s3) {
+        padding-top: 4px;
+      }
+      @include breakpoint($s4) {
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+    /topbar
+-----------------------------------------------------------------------------*/

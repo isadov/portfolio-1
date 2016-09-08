@@ -1,0 +1,12 @@
+.reviews
+  .reviews__list
+    each data, id in reviews
+      .reviews__item
+        .review
+          .review__img-wrapper
+            img(src='#{data.img}' alt='#{data.name}').review__img
+          .review__text= data.text
+            +iconsvg('quote').review__text-quote
+          .review__author
+            span.review__author-name= data.name
+            span.review__author-place= data.place

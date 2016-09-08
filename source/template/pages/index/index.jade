@@ -1,0 +1,58 @@
+extends ../../layouts/main
+
+block title
+  title Портфолио веб-разработчика
+
+block main
+  #page-welcome
+  .welcome
+    .welcome__topbar
+      a.welcome__auth-button#js-authorizetion-button(href='#auth') Авторизоваться
+    .welcome__main
+      .welcome__flip#js-flipper
+        .welcome__hello
+          .hello-card
+            .hello-card__main
+              .hello-card__author
+                +author-card('Савельев Андрей', 'Личный сайт веб разработчика', 'welcome')
+              .hello-card__social
+                +social(social, 'welcome').social
+            .hello-card__footer
+              nav.hello-card__nav
+                ul.hello-card__list
+                  each href, item in welcomeMenu
+                    li.hello-card__item
+                      a.hello-card__link(href=href)= item
+        .welcome__auth
+          .hello-card.hello-card_auth
+            form.hello-card__form.js-authform(action='/login' method='POST')
+              .hello-card__main
+                +title('span').title_auth.hello-card__header Авторизуйтесь
+                label.hello-card__label-icon Логин
+                  input(type='text' name='login' required='required' placeholder='Логин').hello-card__input
+                  .hello-card__icon-wrapper
+                    +iconsvg('login')(class='hello-card__icon hello-card__icon_login')
+                label.hello-card__label-icon Пароль
+                  input(type='password' name='password' required='required' placeholder='Пароль').hello-card__input
+                  .hello-card__icon-wrapper
+                    +iconsvg('password')(class='hello-card__icon hello-card__icon_password')
+                label.hello-card__label-checkbox Я человек
+                  input(type='checkbox' name='ishuman').hello-card__checkbox
+                  +iconsvg('check')(class='hello-card__checkbox-check')
+                span.hello-card__question Вы точно не робот?
+                label.hello-card__label-radio
+                  input(type='radio' name='norobot' value='yes').hello-card__radio
+                  span.hello-card__label-radio-text Да
+                label.hello-card__label-radio
+                  input(type='radio' name='norobot' value='no').hello-card__radio
+                  span.hello-card__label-radio-text Не уверен
+              .hello-card__footer
+                .hello-card__nav
+                  ul.hello-card__list
+                    li.hello-card__item
+                      a.hello-card__link(href='#welcome') На главную
+                    li.hello-card__item
+                      input.hello-card__link(type='submit' value='Войти')
+
+
+    .welcome__footer #[span.welcome__footer-author © Савельев Андрей] создано с любовью в LoftSchool | 2016

@@ -1,0 +1,89 @@
+/*-----------------------------------------------------------------------------
+    address
+-----------------------------------------------------------------------------*/
+.address {
+  box-sizing: border-box;
+  padding: 21px 0 25px;
+  opacity: 0.85;
+  background-color: rgba($c10, .85);
+
+  @include breakpoint($s2) {
+    padding: 31px 0;
+    border-radius: 5px;
+  }
+  @include breakpoint($s3) {
+    padding: 31px 0 34px;
+  }
+  &__list {
+    margin: 0;
+    padding: 0 28px;
+    list-style-type: none;
+
+    @include breakpoint($s2) {
+      padding: 0 19px;
+    }
+    @include breakpoint($s3) {
+      padding: 0 40px;
+    }
+  }
+  &__item {
+    margin-bottom: 19px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__icon-wrap {
+    display: inline-block;
+    width: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  &__icon {
+    display: block;
+    width: 100%;
+    margin: auto;
+    fill: $c8;
+    &_skype {
+      width: 24px;
+      height: 24px;
+    }
+    &_envelope2 {
+      width: 23px;
+      height: 16px;
+    }
+    &_phone2 {
+      width: 17px;
+      height: 20px;
+    }
+    &_map-marker {
+      width: 16px;
+      height: 21px;
+    }
+  }
+  &__label {
+    text-decoration: none;
+    opacity: .8;
+    color: $c9;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 1.5;
+    &:hover {
+      text-decoration: underline;
+      opacity: 1;
+    }
+    &:active {
+      text-decoration: none;
+    }
+    &_text {
+      &:hover {
+        text-decoration: none;
+
+        opacity: .8;
+      }
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------
+    /address
+-----------------------------------------------------------------------------*/
